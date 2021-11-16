@@ -2,14 +2,12 @@
 
 The albatross is a flying mobile base vehicle, and this project is intended to make it easily accessible to modders so it may be treated as another tool in Halo 3's sandbox
 
-# Table of contents
-
-# Table of contents
+## Table of contents
 
 - [Features](#features)
 - [Implementation instructions](#implementation-instructions)
   - [Adding to a scenario](#adding-to-a-scenario)
-  - [Optional: Adding to forge palett](#optional-adding-to-forge-palett)
+  - [Optional: Adding to forge palette](#optional-adding-to-forge-palette)
 - [Build Instructions](#build-instructions)
   - [Animations](#animations)
   - [Render Model](#render-model)
@@ -18,38 +16,41 @@ The albatross is a flying mobile base vehicle, and this project is intended to m
 - [Compiling the sample maps](#compiling-the-sample-maps)
 - [Contribution guidelines](#contribution-guidelines)
 
-# Features
+## Features
 
-- Fully localized physics (localized physics, "mega physics", early mover) - Players and vehicles can move inside the cargo area using the albatross as a frame of reference - Goal markers such as flag and assault goal/spawns and king of the hill markers can be placed within the cargo area in forge - Turrets can be mounted to the cargo area in forge - Objects such as crates and fusion coils can be placed in forge and set to respawn within the cargo area - Doors collide with players, vehicles, etc, but not with the environment, allowing for smooth vehicle entry
+- Fully localized physics (localized physics, "mega physics", early mover):
+  - Players and vehicles can move inside the cargo area using the albatross as a frame of reference
+  - Goal markers such as flag and assault goal/spawns and king of the hill markers can be placed within the cargo area in forge - Turrets can be mounted to the cargo area in forge
+  - Objects such as crates and fusion coils can be placed in forge and set to respawn within the cargo area - Doors collide with players, vehicles, etc, but not with the environment, allowing for smooth vehicle entry
 - Merge of assets from Halo 2 and Halo 3
-- Cut decale restoration
+- Cut decal restoration
 - Custom engine and door animations
 - Model tweaks to maximize animation support
 - Engine thrust and hover fx
 - Multiple variants
 
-## Default
+### Default
 
 - Doors open on landing and close on takeoff
 
-## Doorless
+### Doorless
 
 - No doors
 
-## Scripted
+### Scripted
 
 - Doors open/close with the player exiting/entering the vehicle
 - Changes physics model permutation when player enters/exits the vehicle
 - Objects within the cargo area are trapped within while the doors are closed
 - Supports up to 2 players (as only the host will receive the physics model updates, and must either act solo or as passenger)
 
-# Implementation instructions
+## Implementation instructions
 
-## Adding to a scenario
+### Adding to a scenario
 
 Start by installing the `tags` folder from this mod to your `H3EK` directory
 
-Open your scenario in Sapien, and navigate the hierachy view to `scenario` &#8594; `objects` &#8594; `units` &#8594; `vehicles`
+Open your scenario in Sapien, and navigate the hierarchy view to `scenario` &#8594; `objects` &#8594; `units` &#8594; `vehicles`
 
 Click `edit types` &#8594; `add`, then navigate to `tags\objects\vehicles\albatross`
 
@@ -57,17 +58,17 @@ Double click on the variant(s) you want included, then click `done`
 
 Right click anywhere to create a new vehicle, then adjust the properties pallet to match your desired variant config:
 
-### Default
+#### **Default**
 
 Simply set the `type` to `albatross`
 
-### Doorless
+#### **Doorless**
 
 Set the `type` to `albatross_commando`
 
-### Scripted
+#### **Scripted**
 
-For this to function as intended, a modifiecation to the scenario script is required
+For this to function as intended, a modification to the scenario script is required
 
 Start by copying the original script info for the map you intend to replace from `data/data/levels/<map_type>/<map_name>` to `data/levels/<map_type>/<map_name>`
 
@@ -110,23 +111,23 @@ Save your scenario and give it a name
 
 If you would like to add more than one scripted albatross to a scenario, give it a new name such as `albatross_001`, then add a new set of if statements to the function with all references to `albatross` replaced with the new unit name
 
-## Optional: Adding to forge palett
+### Optional: Adding to forge palette
 
 In Guerilla, open `tags/levels/<map_type>/<map_name>/<your_scenario_name>.scenario`
 
-Navigate down to `MV VEHICLE PALETT` and click add
+Navigate down to `MV VEHICLE palette` and click add
 
 Click the <kbd>...</kbd> for `name` and navigate to `tags/objects/vehicles/albatross` and select the vehicle tag for the variant you want to add. Leave the display name blank, and fill in the price and limit info for forge. Repeat this process for any other variants you want to be usable in forge
 
-> **Note:** It is useful to add the scripted variant here just to be able to move it around in forge, but note that deleting and and respawning it in forge will cause it to loose the name we gave it in Sapien, and thus will no longer be able to update its physics state in response to the script
+> **Note:** It is useful to add the scripted variant here just to be able to move it around in forge, but note that deleting and and respawning it in forge will cause it to lose the name we gave it in Sapien, and thus will no longer be able to update its physics state in response to the script
 
-_Save_
+_Save_.
 
 Your scenario can now be compiled into a map using tool:
 
 `tool build-cache-file "levels\<map_type>\<map_name>\<scenario_name>"`
 
-# Build Instructions
+## Build Instructions
 
 Start by installing both the `data` and `tags` folders from this mod to your `H3EK` directory
 
@@ -134,7 +135,7 @@ The `render_model`, `collision_model`, and `physics_model` can each be opened ei
 
 To export modified versions of each from blender, use the [Halo Asset Blender Development Toolset](https://github.com/General-101/Halo-Asset-Blender-Development-Toolset). Export as a JMS, select Halo 3, select uncheck the model types that aren't currently being modified, set the name to `albatross` and save in the correct folder within the `data/objects/vehicles/albatross` directory to match the model type
 
-## Animations
+### Animations
 
 Start with the render model open in blender
 
@@ -148,7 +149,7 @@ Navigate to `tags\objects\vehicles\albatross` and copy `albatross.model_animatio
 
 In Guerilla, open both `albatross.model_animation_graph` and `albatross_scripted.model_animation_graph`, and enable `expert mode` in the `edit` menu
 
-**albatross.model_animation_graph:**
+#### **albatross.model_animation_graph**
 
 Navigate to the `MODE-n_STATE GRAPH` section
 
@@ -156,7 +157,7 @@ Under MODES `any`, open the dropdown for OVERLAYS and select `throttle`. Click t
 
 Open the MODES dropdown and select `combat`. Delete all the OVERLAYS
 
-_Save now_
+_Save now_.
 
 Scroll down to `SPECIAL CASE ANIMS` and click the `add` button for `VEHICLE SUSPENSION`. Configure like so:
 | | |
@@ -180,13 +181,13 @@ Click the `add` button for `OBJECT OVERLAYS`. Configure like so:
 
 _Save_
 
-**albatross_scripted.model_animation_graph**
+#### **albatross_scripted.model_animation_graph**
 
 Navigate to the `MODE-n_STATE GRAPH` section
 
 Under MODES `any`, open the dropdown for OVERLAYS and select `throttle`. Click the `Delete` button
 
-_Save now_
+_Save now_.
 
 Scroll down to `SPECIAL CASE ANIMS` and click the `add` button for `OBJECT OVERLAYS`. Configure like so:
 | | |
@@ -197,17 +198,17 @@ Scroll down to `SPECIAL CASE ANIMS` and click the `add` button for `OBJECT OVERL
 | function controls | frame |
 | function | thrust |
 
-_Save_
+_Save_.
 
-## Render Model
+### Render Model
 
 Run `tool render "objects\vehicles\albatross" draft`
 
-## Collision Model
+### Collision Model
 
 Run `tool collision "objects\vehicles\albatross"`
 
-## Physics Model
+### Physics Model
 
 Run `tool physics "objects\vehicles\albatross"`
 
@@ -230,9 +231,9 @@ Scroll down to the `REGIONS` section, and select `hull` from the dropdown
 
 Under `RIGID BODIES` click `Add`, and in the new `rigid body` dropdown, select `mega_physics (hull base)`
 
-_Save_
+_Save_.
 
-# Compiling the sample maps
+## Compiling the sample maps
 
 Copy the contents of the `sample` folder from this repo into your `H3EK` directory
 
@@ -246,7 +247,7 @@ Now to compile each of the maps, run the following tool commands for each respec
 
 Now just move the maps from your `H3EK/maps` directory into your `<mcc_path>/halo3/maps` directory
 
-# Contribution guidelines
+## Contribution guidelines
 
 1. Fork this repo
 2. Follow the steps in [Build Instructions](#build-instructions) to make changes
