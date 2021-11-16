@@ -21,7 +21,8 @@ The albatross is a flying mobile base vehicle, and this project is intended to m
 - Fully localized physics (localized physics, "mega physics", early mover):
   - Players and vehicles can move inside the cargo area using the albatross as a frame of reference
   - Goal markers such as flag and assault goal/spawns and king of the hill markers can be placed within the cargo area in forge - Turrets can be mounted to the cargo area in forge
-  - Objects such as crates and fusion coils can be placed in forge and set to respawn within the cargo area - Doors collide with players, vehicles, etc, but not with the environment, allowing for smooth vehicle entry
+  - Objects such as crates and fusion coils can be placed in forge and set to respawn within the cargo area
+  - Doors collide with players, vehicles, etc, but not with the environment, allowing for smooth vehicle entry
 - Merge of assets from Halo 2 and Halo 3
 - Cut decal restoration
 - Custom engine and door animations
@@ -179,7 +180,7 @@ Click the `add` button for `OBJECT OVERLAYS`. Configure like so:
 | function controls | frame |
 | function | thrust |
 
-_Save_
+_Save_.
 
 #### **albatross_scripted.model_animation_graph**
 
