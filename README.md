@@ -4,8 +4,6 @@ The albatross is a flying mobile base vehicle, and this project is intended to m
 
 # Table of contents
 
-# Table of contents
-
 - [Features](#features)
 - [Implementation instructions](#implementation-instructions)
   - [Adding to a scenario](#adding-to-a-scenario)
