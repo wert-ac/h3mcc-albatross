@@ -1,5 +1,7 @@
 # Halo 3 MCC Albatross
 
+[![NEXUS MODS](https://img.shields.io/badge/NEXUS-MODS-orange)](https://www.nexusmods.com/halothemasterchiefcollection/mods/1566)
+
 The albatross is a flying mobile base vehicle, and this project is intended to make it easily accessible to modders so it may be treated as another tool in Halo 3's sandbox
 
 ## Table of contents
@@ -18,32 +20,33 @@ The albatross is a flying mobile base vehicle, and this project is intended to m
 
 ## Features
 
-- Fully localized physics (localized physics, "mega physics", early mover):
-  - Players and vehicles can move inside the cargo area using the albatross as a frame of reference
-  - Goal markers such as flag and assault goal/spawns and king of the hill markers can be placed within the cargo area in forge - Turrets can be mounted to the cargo area in forge
-  - Objects such as crates and fusion coils can be placed in forge and set to respawn within the cargo area
-  - Doors collide with players, vehicles, etc, but not with the environment, allowing for smooth vehicle entry
-- Merge of assets from Halo 2 and Halo 3
+### Fully localized physics (localized physics, "mega physics", early mover):
+
+- Players and vehicles can move inside the cargo area using the albatross as a frame of reference
+- Goal markers such as flag and assault goal/spawns and king of the hill markers can be placed within the cargo area in forge
+- Turrets can be mounted to the cargo area in forge
+- Objects such as crates and fusion coils can be placed in forge and set to respawn within the cargo area
+- Doors collide with players, vehicles, etc, but not with the environment, allowing for smooth vehicle entry
+
+### Multiple variants
+
+- **Default:** Static physics for multiplayer. Doors open and close with landing and takeoff respectively
+- **Commando:** No doors
+- **Scripted:** Works best for singleplayer but can be done with two players. Doors close and open when a player enters or exits the vehicle. A script uses this same trigger to toggle the albatross's physics model between an open and closed permutation. This update will only take effect for the host, so if playing with another player, the host must be the passenger.
+
+### Graphical tweaks
+
+- Doors restored from Halo 2
 - Cut decal restoration
 - Custom engine and door animations
 - Model tweaks to maximize animation support
 - Engine thrust and hover fx
-- Multiple variants
 
-### Default
+### Sample Maps
 
-- Doors open on landing and close on takeoff
-
-### Doorless
-
-- No doors
-
-### Scripted
-
-- Doors open/close with the player exiting/entering the vehicle
-- Changes physics model permutation when player enters/exits the vehicle
-- Objects within the cargo area are trapped within while the doors are closed
-- Supports up to 2 players (as only the host will receive the physics model updates, and must either act solo or as passenger)
+- **Sandtrap:** All variants pre-placed, and attacker team goal markers default position moved into cargo area of doorless albatross
+- **Sandbox:** All variants pre-placed
+- **Rat's Nest:** Scripted variant pre-placed where scenery pelican ordinarily would be. All variants in forge palette
 
 ## Implementation instructions
 
