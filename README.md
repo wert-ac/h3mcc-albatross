@@ -127,7 +127,7 @@ Click the <kbd>...</kbd> for `name` and navigate to `tags/objects/vehicles/albat
 
 _Save_.
 
-Your scenario can now be compiled into a map using tool:
+Your scenario can now be compiled into a map using Tool:
 
 `tool build-cache-file "levels\<map_type>\<map_name>\<scenario_name>"`
 
@@ -243,7 +243,7 @@ Copy the contents of the `sample` folder from this repo into your `H3EK` directo
 
 Make any desired edits to the scripts for the sample scenarios in `data/levels/<map_type>/<map_name>/scripts/<map_name>_main.hsc`. If you choose to do so, remember to open the scenario in Sapien and compile the scripts with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>
 
-Now to compile each of the maps, run the following tool commands for each respective map:
+Now to compile each of the maps, run the following Tool commands for each respective map:
 
 - **Sandtrap:** `tool build-cache-file "levels\multi\shrine\shrine"`
 - **Sandbox:** `tool build-cache-file "levels\dlc\sandbox\sandbox"`
