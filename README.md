@@ -11,10 +11,6 @@ The albatross is a flying mobile base vehicle, and this project is intended to m
   - [Adding to a scenario](#adding-to-a-scenario)
   - [Optional: Adding to forge palette](#optional-adding-to-forge-palette)
 - [Build Instructions](#build-instructions)
-  - [Animations](#animations)
-  - [Render Model](#render-model)
-  - [Collision Model](#collision-model)
-  - [Physics Model](#physics-model)
 - [Compiling the sample maps](#compiling-the-sample-maps)
 - [Contribution guidelines](#contribution-guidelines)
 
@@ -216,26 +212,11 @@ Run `tool collision "objects\vehicles\albatross"`
 
 Run `tool physics "objects\vehicles\albatross"`
 
-Now, within Guerilla, open `tags\objects\vehicle\albatross\albatross.physics_model`
+### Bulk
 
-Enable `expert mode` in the `edit` menu
+To update the render, collision, and physics models all at once, run
 
-Navigate to the `RIGID BODIES` section and click `Add`
-
-Make the following changes:
-
-- Set `node` to `mega_physics`
-- Set `region` to `hull`
-- Set `permutation` to `base`
-- Set `motion type` to `box`
-- Set `shape type` to `polyhedron`
-- Set `shape` to `big_friggin_physics`
-
-Scroll down to the `REGIONS` section, and select `hull` from the dropdown
-
-Under `RIGID BODIES` click `Add`, and in the new `rigid body` dropdown, select `mega_physics (hull base)`
-
-_Save_.
+`tool bulk-import-model-folder "objects\vehicles\albatross"`
 
 ## Compiling the sample maps
 
@@ -247,7 +228,8 @@ Now to compile each of the maps, run the following Tool commands for each respec
 
 - **Sandtrap:** `tool build-cache-file "levels\multi\shrine\shrine"`
 - **Sandbox:** `tool build-cache-file "levels\dlc\sandbox\sandbox"`
-- **Rat's Nest:** `tool build-cache-file "levels\dlc\armory\armory_albatross"`
+- **Rat's Nest:** `tool build-cache-file "levels\dlc\armory\armory"`
+- **The Storm:** `tool build-cache-file "levels\solo\040_voi"`
 
 Now just move the maps from your `H3EK/maps` directory into your `<mcc_path>/halo3/maps` directory
 
