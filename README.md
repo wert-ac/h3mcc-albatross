@@ -145,9 +145,14 @@ Modifications can then be exported as JMA, but be sure to configure the exporter
 
 Run `tool model-animations "objects\vehicles\albatross"`
 
-Navigate to `tags\objects\vehicles\albatross` and copy `albatross.model_animation_graph` to `albatross_scripted.model_animation_graph`
+Navigate to `tags\objects\vehicles\albatross` make two copies of `albatross.model_animation_graph`:
 
-In Guerilla, open both `albatross.model_animation_graph` and `albatross_scripted.model_animation_graph`, and enable `expert mode` in the `edit` menu
+1. `albatross_scripted.model_animation_graph`
+2. `albatross_commando.model_animation_graph`
+
+In Guerilla, open `albatross.model_animation_graph`, `albatross_scripted.model_animation_graph`, and `albatross_commando.model_animation_graph`
+
+Enable `expert mode` in the `edit` menu
 
 #### **albatross.model_animation_graph**
 
@@ -186,6 +191,27 @@ _Save_.
 Navigate to the `MODE-n_STATE GRAPH` section
 
 Under MODES `any`, open the dropdown for OVERLAYS and select `throttle`. Click the `Delete` button
+
+_Save now_.
+
+Scroll down to `SPECIAL CASE ANIMS` and click the `add` button for `OBJECT OVERLAYS`. Configure like so:
+| | |
+|-------------------|------------------|
+| label | vehicle:throttle |
+| graph index | -1 |
+| animation | vehicle:throttle |
+| function controls | frame |
+| function | thrust |
+
+_Save_.
+
+#### **albatross_commando.model_animation_graph**
+
+Navigate to the `MODE-n_STATE GRAPH` section
+
+Under MODES `any`, open the dropdown for OVERLAYS and select `throttle`. Click the `Delete` button
+
+Open the MODES dropdown and select `combat`. Delete all the OVERLAYS
 
 _Save now_.
 
