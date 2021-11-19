@@ -244,6 +244,8 @@ To update the render, collision, and physics models all at once, run
 
 `tool bulk-import-model-folder "objects\vehicles\albatross"`
 
+And then run `tool render "objects\vehicles\albatross" draft` because "final" mode currently breaks the render model
+
 ## Compiling the sample maps
 
 Copy the contents of the `sample` folder from this repo into your `H3EK` directory
