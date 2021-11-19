@@ -56,7 +56,7 @@ Click `edit types` &#8594; `add`, then navigate to `tags\objects\vehicles\albatr
 
 Double click on the variant(s) you want included, then click `done`
 
-Right click anywhere to create a new vehicle, then adjust the properties pallet to match your desired variant config:
+Right click anywhere to create a new vehicle, then adjust the properties palette to match your desired variant config:
 
 #### **Default**
 
