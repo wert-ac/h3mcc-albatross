@@ -88,57 +88,69 @@ b_piston_l_rear
 -193.0162353516	149.5451202393	338.8856811523
 
 ;### MATERIALS ###
-12
+15
 ;	<name>
 ;	<(Material Slot Index) LOD Permutation Region>
 
 ;MATERIAL 0
 hard_metal_thick
-(1) base hull
+(8) base hull
 
 ;MATERIAL 1
 mega_physics
-(7) base hull
+(13) base hull
 
 ;MATERIAL 2
 localized_physics
-(5) base hull
+(12) base hull
 
 ;MATERIAL 3
 hard_metal_thick
-(1) clear doorway_right
+(8) clear doorway_right
 
 ;MATERIAL 4
 hard_metal_thick
-(1) blocked doorway_rear
+(8) blocked doorway_rear
 
 ;MATERIAL 5
 hard_metal_thick
-(1) blocked doorway_right
+(8) blocked doorway_right
 
 ;MATERIAL 6
 hard_metal_thick
-(1) clear doorway_rear
+(8) clear doorway_rear
 
 ;MATERIAL 7
 hard_metal_thick
-(1) blocked doorway_left
+(8) blocked doorway_left
 
 ;MATERIAL 8
 hard_metal_thick
-(1) clear doorway_left
+(8) clear doorway_left
 
 ;MATERIAL 9
 hard_metal_thick
-(1) commando doorway_right
+(8) commando doorway_right
 
 ;MATERIAL 10
 hard_metal_thick
-(1) commando doorway_rear
+(8) commando doorway_rear
 
 ;MATERIAL 11
 hard_metal_thick
-(1) commando doorway_left
+(8) commando doorway_left
+
+;MATERIAL 12
+hard_metal_thick
+(8) medium doorway_left
+
+;MATERIAL 13
+hard_metal_thick
+(8) medium doorway_rear
+
+;MATERIAL 14
+hard_metal_thick
+(8) medium doorway_right
 
 ;### MARKERS ###
 0
@@ -228,7 +240,7 @@ crane_host
 ;	<radius>
 
 ;### CONVEX SHAPES ###
-78
+81
 ;	<name>
 ;	<parent>
 ;	<material>
@@ -1562,6 +1574,54 @@ doorway_commando_left
 -21.0408649445	-26.4354496002	-25.6735572815
 -24.6755847931	26.9821701050	-31.5178432465
 -24.6755847931	-26.9821319580	-31.5178432465
+
+;CONVEX 78
+doorway_medium_left
+0
+12
+0.3799282312	0.3799282014	-0.5963678360	0.5963677764
+-100.4400482178	191.9225463867	0.9159545898
+8
+72.9720001221	169.2753906250	-42.5418548584
+72.9720306396	-169.2759857178	-42.5417327881
+80.5124053955	172.6125030518	-25.0412597656
+80.5124664307	-172.6124725342	-25.0411529541
+-73.6015930176	169.2753906250	25.0881500244
+-73.6015319824	-169.2760162354	25.0882568359
+-103.7771301270	172.7763061523	51.3206405640
+-103.7771911621	-172.7766571045	51.3205871582
+
+;CONVEX 79
+doorway_medium_rear
+0
+13
+0.0000000000	0.5372996330	0.0000000000	0.8433914185
+-294.8831481934	-7.8677306175	-1.7389831543
+8
+72.9720153809	169.2754058838	-42.5418548584
+72.9720458984	-169.2759704590	-42.5417633057
+80.5124206543	172.6125030518	-25.0412902832
+80.5124816895	-172.6124725342	-25.0411682129
+-73.6015930176	169.2753906250	25.0881042480
+-73.6015014648	-169.2760162354	25.0882415771
+-103.7771606445	172.7763214111	51.3206329346
+-103.7771911621	-172.7766571045	51.3205718994
+
+;CONVEX 80
+doorway_medium_right
+0
+14
+-0.3799282312	0.3799282014	0.5963678360	0.5963677764
+-98.7804718018	-197.7522735596	-1.5265960693
+8
+72.9720001221	169.2754058838	-42.5418395996
+72.9720306396	-169.2759704590	-42.5417480469
+80.5124053955	172.6125030518	-25.0412597656
+80.5124511719	-172.6124725342	-25.0411529541
+-73.6016082764	169.2754058838	25.0881423950
+-73.6015167236	-169.2760009766	25.0882568359
+-103.7771453857	172.7763214111	51.3206405640
+-103.7772064209	-172.7766418457	51.3205871582
 
 ;### RAGDOLLS ###
 0
