@@ -22,7 +22,7 @@ b_hull
 
 ;MATERIAL 0
 hard_metal_thick
-(8) base hull
+(12) base hull
 
 ;### MARKERS ###
 0
