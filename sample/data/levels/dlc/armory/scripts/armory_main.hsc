@@ -16,4 +16,4 @@
 		(object_set_permutation albatross doorway_right blocked)
 		(object_set_permutation albatross doorway_right clear)
 	)
-	
+)
