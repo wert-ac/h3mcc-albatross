@@ -1,6 +1,6 @@
 # Halo 3 MCC Albatross
 
-[![NEXUS MODS](https://img.shields.io/badge/NEXUS-MODS-orange)](https://www.nexusmods.com/halothemasterchiefcollection/mods/1566)
+[![NEXUS MODS](https://img.shields.io/badge/NEXUS-MODS-orange)](https://www.nexusmods.com/halothemasterchiefcollection/mods/1566) [![STEAM WORKSHOP](https://img.shields.io/badge/STEAM-WORKSHOP-blue)](https://steamcommunity.com/sharedfiles/filedetails/?id=2898980746)
 
 The albatross is a flying mobile base vehicle, and this project is intended to make it easily accessible to modders so it may be treated as another tool in Halo 3's sandbox
 
